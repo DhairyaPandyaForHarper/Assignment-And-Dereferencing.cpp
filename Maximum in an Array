@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int nums[] = {12, 45, 7, 89, 23, 4};
+    int size = 6;
+
+    int* max_ptr = nums;
+
+    for (int* ptr = nums; ptr < nums + size; ptr++) {
+        if (*ptr > *max_ptr) {
+            max_ptr = ptr;
+        }
+    }
+
+    cout << "Maximum value: " << *max_ptr << endl;
+
+    return 0;
+}
