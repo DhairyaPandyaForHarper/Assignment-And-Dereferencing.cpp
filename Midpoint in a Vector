@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> nums = {10, 25, 7, 14, 33};
+
+    int* left = &nums[0];
+    int* right = &nums[0] + nums.size() - 1;
+
+    while (left < right) {
+        if (left + 1 == right) {
+            break;
+        }
+
+        left++;
+        right--;
+    }
+
+    cout << "Midpoint value: " << *left << endl;
+
+    return 0;
+}
