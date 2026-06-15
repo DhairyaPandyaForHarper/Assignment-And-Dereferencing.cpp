@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char word[] = "hello";
+    char* ptr = word;
+
+    int length = 0;
+
+    while (*ptr != '\0') {
+        length++;
+        ptr++;
+    }
+
+    cout << "Length: " << length << endl;
+
+    return 0;
+}
